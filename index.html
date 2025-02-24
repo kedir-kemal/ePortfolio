@@ -1,54 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kedir Kemal's Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kedir Kemal | Geospatial Expert Portfolio</title>
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
   <style>
-    /* Add your CSS styling here */
-    body { font-family: Arial, sans-serif; }
-    /* ... rest of your styles ... */
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: #f8f9fa;
+    }
+    /* Hero Section */
+    .hero {
+      background: url('https://source.unsplash.com/1600x900/?geospatial,earth,geography') no-repeat center center;
+      background-size: cover;
+      height: 100vh;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+      padding: 0 1rem;
+    }
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: bold;
+    }
+    .hero p {
+      font-size: 1.5rem;
+    }
+    /* Section Titles */
+    .section-title {
+      margin-bottom: 2rem;
+      font-weight: bold;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+    /* Project Cards */
+    .project-card {
+      transition: transform 0.3s ease;
+    }
+    .project-card:hover {
+      transform: scale(1.05);
+    }
+    /* Footer */
+    footer {
+      background: #343a40;
+      color: #fff;
+      padding: 1rem 0;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Kedir Kemal's Portfolio</h1>
-    <p>Web Developer & Designer</p>
-  </header>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Kedir Kemal</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
-  <div class="container">
-    <section id="about">
-      <h2>About Me</h2>
-      <p>Hello! I'm Kedir Kemal, a passionate web developer with experience in creating responsive and engaging websites. This portfolio showcases some of my recent projects and skills.</p>
-    </section>
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="projects">
-        <div class="project">
-          <h3>Project One</h3>
-          <p>A brief description of Project One. <a href="#">View Details</a></p>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Geospatial Expertise</h1>
+      <p>Innovative Solutions in Geospatial Analysis & Mapping</p>
+      <a href="#projects" class="btn btn-primary btn-lg mt-4">Explore My Work</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <img src="https://source.unsplash.com/600x400/?geography,map" alt="Geospatial" class="img-fluid rounded shadow">
         </div>
-        <div class="project">
-          <h3>Project Two</h3>
-          <p>A brief description of Project Two. <a href="#">View Details</a></p>
-        </div>
-        <div class="project">
-          <h3>Project Three</h3>
-          <p>A brief description of Project Three. <a href="#">View Details</a></p>
+        <div class="col-md-6">
+          <p>
+            Hello, I'm Kedir Kemal, a dedicated geospatial expert specializing in Geographic Information Systems (GIS), remote sensing, and spatial data analysis. I leverage cutting-edge technology and innovative methodologies to solve complex spatial problems.
+          </p>
+          <p>
+            With a robust background in both public and private sectors, I have managed projects that analyze environmental impacts, support urban planning, and drive sustainable development. My goal is to turn spatial data into actionable insights.
+          </p>
         </div>
       </div>
-    </section>
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>You can reach me at <a href="mailto:youremail@example.com">youremail@example.com</a> or find me on <a href="#">LinkedIn</a>.</p>
-    </section>
-  </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card project-card">
+            <img src="https://source.unsplash.com/600x400/?satellite,map" class="card-img-top" alt="Satellite Imagery Analysis">
+            <div class="card-body">
+              <h5 class="card-title">Satellite Imagery Analysis</h5>
+              <p class="card-text">
+                Utilizing high-resolution satellite data for environmental monitoring and urban development planning.
+              </p>
+              <a href="#" class="btn btn-outline-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card project-card">
+            <img src="https://source.unsplash.com/600x400/?GIS,technology" class="card-img-top" alt="GIS Mapping Solutions">
+            <div class="card-body">
+              <h5 class="card-title">GIS Mapping Solutions</h5>
+              <p class="card-text">
+                Creating interactive maps and spatial databases to enhance decision-making in various industries.
+              </p>
+              <a href="#" class="btn btn-outline-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card project-card">
+            <img src="https://source.unsplash.com/600x400/?remote,sensing" class="card-img-top" alt="Remote Sensing Applications">
+            <div class="card-body">
+              <h5 class="card-title">Remote Sensing Applications</h5>
+              <p class="card-text">
+                Employing remote sensing technologies to assess land use, monitor natural resources, and support disaster management.
+              </p>
+              <a href="#" class="btn btn-outline-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications Section -->
+  <section id="publications" class="py-5">
+    <div class="container">
+      <h2 class="section-title">Publications</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <strong>Efficient Spatial Data Analysis in Urban Environments</strong>
+              <p class="mb-0">Journal of Geospatial Science, 2023</p>
+            </li>
+            <li class="list-group-item">
+              <strong>Remote Sensing Techniques for Land Use Classification</strong>
+              <p class="mb-0">International Journal of GIS, 2022</p>
+            </li>
+            <li class="list-group-item">
+              <strong>Innovative Approaches to Environmental Mapping</strong>
+              <p class="mb-0">Environmental Data Science, 2021</p>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <img src="https://source.unsplash.com/600x400/?research,map" alt="Publications" class="img-fluid rounded shadow">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Your Name" />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="name@example.com" />
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="3" placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <h5>Get in Touch</h5>
+          <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+          <p>LinkedIn: <a href="#">LinkedIn Profile</a></p>
+          <p>Location: Your City, Country</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Kedir Kemal. All Rights Reserved.</p>
+    <div class="container">
+      <p>&copy; 2025 Kedir Kemal. All Rights Reserved.</p>
+    </div>
   </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
